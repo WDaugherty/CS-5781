@@ -1,0 +1,35 @@
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 2 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+Running size 64
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 8 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+{'fast': 0.0036422411600748696, 'gpu': 0.007088502248128255}
+Running size 128
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 32 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+{'fast': 0.014528751373291016, 'gpu': 0.017010927200317383}
+Running size 256
+{'fast': 0.07327055931091309, 'gpu': 0.055614312489827476}
+Running size 512
+{'fast': 0.9218592643737793, 'gpu': 0.20803411801656088}
+Running size 1024
+{'fast': 9.464149951934814, 'gpu': 1.0912458896636963}
+
+Timing summary
+Size: 64
+    fast: 0.00364
+    gpu: 0.00709
+Size: 128
+    fast: 0.01453
+    gpu: 0.01701
+Size: 256
+    fast: 0.07327
+    gpu: 0.05561
+Size: 512
+    fast: 0.92186
+    gpu: 0.20803
+Size: 1024
+    fast: 9.46415
+    gpu: 1.09125

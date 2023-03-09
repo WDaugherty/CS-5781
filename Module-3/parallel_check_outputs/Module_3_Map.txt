@@ -1,0 +1,81 @@
+MAP
+
+================================================================================
+ Parallel Accelerator Optimizing:  Function tensor_map.<locals>._map,
+/Users/wdaugherty/github-classroom/Cornell-Tech-ML/mle-
+module-3-WDaugherty/minitorch/fast_ops.py (154)
+================================================================================
+
+
+Parallel loop listing for  Function tensor_map.<locals>._map, /Users/wdaugherty/github-classroom/Cornell-Tech-ML/mle-module-3-WDaugherty/minitorch/fast_ops.py (154)
+-------------------------------------------------------------------------|loop #ID
+    def _map(                                                            |
+        out: Storage,                                                    |
+        out_shape: Shape,                                                |
+        out_strides: Strides,                                            |
+        in_storage: Storage,                                             |
+        in_shape: Shape,                                                 |
+        in_strides: Strides,                                             |
+    ) -> None:                                                           |
+        # TODO: Implement for Task 3.1.                                  |
+        # raise NotImplementedError("Need to implement for Task 3.1")    |
+        for i in prange(len(out)):  # Loop in parallel/Outer loop--------| #2
+            out_index: Index = np.zeros(---------------------------------| #0
+                MAX_DIMS, np.int16                                       |
+            )  # Is this what it means by numpy buffer?                  |
+            in_index: Index = np.zeros(----------------------------------| #1
+                MAX_DIMS, np.int16                                       |
+            )  # Is this what it means by numpy buffer?                  |
+            to_index(i, out_shape, out_index)                            |
+            broadcast_index(out_index, out_shape, in_shape, in_index)    |
+            o = index_to_position(out_index, out_strides)                |
+            j = index_to_position(in_index, in_strides)                  |
+            out[o] = fn(in_storage[j])                                   |
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+Following the attempted fusion of parallel for-loops there are 3 parallel for-
+loop(s) (originating from loops labelled: #2, #0, #1).
+--------------------------------------------------------------------------------
+---------------------------- Optimising loop nests -----------------------------
+Attempting loop nest rewrites (optimising for the largest parallel loops)...
+
++--2 is a parallel loop
+   +--0 --> rewritten as a serial loop
+   +--1 --> rewritten as a serial loop
+--------------------------------------------------------------------------------
+----------------------------- Before Optimisation ------------------------------
+Parallel region 0:
++--2 (parallel)
+   +--0 (parallel)
+   +--1 (parallel)
+
+
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel region 0:
++--2 (parallel)
+   +--0 (serial)
+   +--1 (serial)
+
+
+
+Parallel region 0 (loop #2) had 0 loop(s) fused and 2 loop(s) serialized as part
+ of the larger parallel loop (#2).
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+The memory allocation derived from the instruction at /Users/wdaugherty/github-
+classroom/Cornell-Tech-ML/mle-module-3-WDaugherty/minitorch/fast_ops.py (165) is
+ hoisted out of the parallel loop labelled #2 (it will be performed before the
+loop is executed and reused inside the loop):
+   Allocation:: out_index: Index = np.zeros(
+    - numpy.empty() is used for the allocation.
+The memory allocation derived from the instruction at /Users/wdaugherty/github-
+classroom/Cornell-Tech-ML/mle-module-3-WDaugherty/minitorch/fast_ops.py (168) is
+ hoisted out of the parallel loop labelled #2 (it will be performed before the
+loop is executed and reused inside the loop):
+   Allocation:: in_index: Index = np.zeros(
+    - numpy.empty() is used for the allocation.
+None

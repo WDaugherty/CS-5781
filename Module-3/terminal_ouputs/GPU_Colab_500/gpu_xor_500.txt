@@ -1,0 +1,621 @@
+!cd $DIR; PYTHONPATH=/content/$DIR python3.8 project/run_fast_tensor.py --BACKEND gpu --HIDDEN 500 --DATASET xor --RATE 0.05
+
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 32 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 16 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 32 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 16 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 16 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 16 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 32 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 16 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+Epoch  0  time  7.2427637577056885
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 4 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 2 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 2 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/cudadrv/devicearray.py:885: NumbaPerformanceWarning: Host array used in CUDA kernel will incur copy overhead to/from device.
+  warn(NumbaPerformanceWarning(msg))
+/usr/local/lib/python3.8/dist-packages/numba/cuda/dispatcher.py:488: NumbaPerformanceWarning: Grid size 2 will likely result in GPU under-utilization due to low occupancy.
+  warn(NumbaPerformanceWarning(msg))
+Epoch  0  loss  80.5184211853231 correct 26
+Epoch  1  time  4.182070016860962
+Epoch  2  time  2.5211246013641357
+Epoch  3  time  2.379258155822754
+Epoch  4  time  2.428374767303467
+Epoch  5  time  2.4805760383605957
+Epoch  6  time  2.3904824256896973
+Epoch  7  time  2.394843339920044
+Epoch  8  time  2.3958847522735596
+Epoch  9  time  2.516380786895752
+Epoch  10  time  2.38922119140625
+Epoch  10  loss  5.132336270984158 correct 33
+Epoch  11  time  2.3813717365264893
+Epoch  12  time  2.4544286727905273
+Epoch  13  time  2.3840172290802
+Epoch  14  time  2.384232759475708
+Epoch  15  time  2.4067115783691406
+Epoch  16  time  2.4872968196868896
+Epoch  17  time  2.377201795578003
+Epoch  18  time  2.4659085273742676
+Epoch  19  time  2.445129632949829
+Epoch  20  time  2.4466073513031006
+Epoch  20  loss  1.4191159025816273 correct 48
+Epoch  21  time  2.460099220275879
+Epoch  22  time  2.4268298149108887
+Epoch  23  time  2.4205946922302246
+Epoch  24  time  2.363743782043457
+Epoch  25  time  2.3837695121765137
+Epoch  26  time  2.4474267959594727
+Epoch  27  time  2.3821394443511963
+Epoch  28  time  2.425577163696289
+Epoch  29  time  3.0154268741607666
+Epoch  30  time  4.080603122711182
+Epoch  30  loss  5.420002663377781 correct 44
+Epoch  31  time  4.052382707595825
+Epoch  32  time  3.4661991596221924
+Epoch  33  time  2.393538236618042
+Epoch  34  time  2.4732871055603027
+Epoch  35  time  2.4224750995635986
+Epoch  36  time  2.4035654067993164
+Epoch  37  time  2.4711923599243164
+Epoch  38  time  2.4230408668518066
+Epoch  39  time  2.420217752456665
+Epoch  40  time  2.4091691970825195
+Epoch  40  loss  1.3671651588710518 correct 49
+Epoch  41  time  2.4711081981658936
+Epoch  42  time  2.381007194519043
+Epoch  43  time  2.375704050064087
+Epoch  44  time  2.4757065773010254
+Epoch  45  time  2.345179319381714
+Epoch  46  time  2.3491804599761963
+Epoch  47  time  2.411088228225708
+Epoch  48  time  2.499440908432007
+Epoch  49  time  2.404500961303711
+Epoch  50  time  2.3946573734283447
+Epoch  50  loss  0.07251168070653938 correct 47
+Epoch  51  time  2.452573537826538
+Epoch  52  time  2.479365348815918
+Epoch  53  time  2.3857288360595703
+Epoch  54  time  2.4004907608032227
+Epoch  55  time  2.4870975017547607
+Epoch  56  time  2.404817581176758
+Epoch  57  time  2.4334802627563477
+Epoch  58  time  2.388608455657959
+Epoch  59  time  3.050767421722412
+Epoch  60  time  4.042770147323608
+Epoch  60  loss  0.559935784986185 correct 49
+Epoch  61  time  4.063469171524048
+Epoch  62  time  3.4931063652038574
+Epoch  63  time  2.4710512161254883
+Epoch  64  time  2.46004056930542
+Epoch  65  time  2.3930373191833496
+Epoch  66  time  2.4622557163238525
+Epoch  67  time  2.4294655323028564
+Epoch  68  time  2.405135154724121
+Epoch  69  time  2.474936008453369
+Epoch  70  time  2.406416893005371
+Epoch  70  loss  1.1766671738606982 correct 50
+Epoch  71  time  2.421323776245117
+Epoch  72  time  2.4082252979278564
+Epoch  73  time  2.4456844329833984
+Epoch  74  time  2.4094090461730957
+Epoch  75  time  2.390026330947876
+Epoch  76  time  2.4535863399505615
+Epoch  77  time  2.3896572589874268
+Epoch  78  time  2.386363983154297
+Epoch  79  time  2.3986563682556152
+Epoch  80  time  2.4779751300811768
+Epoch  80  loss  0.39833659477187555 correct 49
+Epoch  81  time  2.3827624320983887
+Epoch  82  time  2.3923630714416504
+Epoch  83  time  2.4201576709747314
+Epoch  84  time  2.4216010570526123
+Epoch  85  time  2.4023356437683105
+Epoch  86  time  2.437035083770752
+Epoch  87  time  2.486887216567993
+Epoch  88  time  2.429755449295044
+Epoch  89  time  3.6839559078216553
+Epoch  90  time  4.053363561630249
+Epoch  90  loss  0.31744548210117374 correct 49
+Epoch  91  time  4.027777194976807
+Epoch  92  time  4.0321197509765625
+Epoch  93  time  4.08048152923584
+Epoch  94  time  2.8305304050445557
+Epoch  95  time  2.4320154190063477
+Epoch  96  time  2.3882720470428467
+Epoch  97  time  2.384821653366089
+Epoch  98  time  2.464510917663574
+Epoch  99  time  2.375164747238159
+Epoch  100  time  2.4303293228149414
+Epoch  100  loss  0.4609451336457644 correct 49
+Epoch  101  time  2.526383876800537
+Epoch  102  time  2.445707321166992
+Epoch  103  time  2.4158737659454346
+Epoch  104  time  2.434406042098999
+Epoch  105  time  2.4650039672851562
+Epoch  106  time  2.4045562744140625
+Epoch  107  time  2.4369218349456787
+Epoch  108  time  2.456205129623413
+Epoch  109  time  2.524777889251709
+Epoch  110  time  2.455906867980957
+Epoch  110  loss  0.09874381593704587 correct 49
+Epoch  111  time  2.4807708263397217
+Epoch  112  time  2.476471185684204
+Epoch  113  time  2.3947949409484863
+Epoch  114  time  2.426278591156006
+Epoch  115  time  2.4155423641204834
+Epoch  116  time  2.490727186203003
+Epoch  117  time  3.039983034133911
+Epoch  118  time  4.012162923812866
+Epoch  119  time  4.123130798339844
+Epoch  120  time  3.4155027866363525
+Epoch  120  loss  0.9359149696258786 correct 50
+Epoch  121  time  2.3941891193389893
+Epoch  122  time  2.368934392929077
+Epoch  123  time  2.4623095989227295
+Epoch  124  time  2.431821346282959
+Epoch  125  time  2.4350833892822266
+Epoch  126  time  2.476083278656006
+Epoch  127  time  2.404730796813965
+Epoch  128  time  2.371438503265381
+Epoch  129  time  2.4198756217956543
+Epoch  130  time  2.478804588317871
+Epoch  130  loss  1.2888933614188811 correct 49
+Epoch  131  time  2.39194655418396
+Epoch  132  time  2.4185984134674072
+Epoch  133  time  2.4041168689727783
+Epoch  134  time  2.488051176071167
+Epoch  135  time  2.356266975402832
+Epoch  136  time  2.370908737182617
+Epoch  137  time  2.4806032180786133
+Epoch  138  time  2.461549758911133
+Epoch  139  time  2.385854482650757
+Epoch  140  time  2.3952813148498535
+Epoch  140  loss  0.8878015688481242 correct 49
+Epoch  141  time  2.418490171432495
+Epoch  142  time  2.4062986373901367
+Epoch  143  time  2.3627538681030273
+Epoch  144  time  2.442884922027588
+Epoch  145  time  2.3685410022735596
+Epoch  146  time  2.378936767578125
+Epoch  147  time  3.7528812885284424
+Epoch  148  time  4.103524684906006
+Epoch  149  time  4.063910484313965
+Epoch  150  time  2.5943894386291504
+Epoch  150  loss  0.08020575996417775 correct 50
+Epoch  151  time  2.416050672531128
+Epoch  152  time  2.387646436691284
+Epoch  153  time  2.4234237670898438
+Epoch  154  time  2.42622709274292
+Epoch  155  time  2.452641010284424
+Epoch  156  time  2.4353294372558594
+Epoch  157  time  2.400352954864502
+Epoch  158  time  2.4680709838867188
+Epoch  159  time  2.3796164989471436
+Epoch  160  time  2.3706581592559814
+Epoch  160  loss  0.993517274311006 correct 49
+Epoch  161  time  2.418224334716797
+Epoch  162  time  2.480393171310425
+Epoch  163  time  2.3757593631744385
+Epoch  164  time  2.4025988578796387
+Epoch  165  time  2.441865921020508
+Epoch  166  time  2.388042688369751
+Epoch  167  time  2.383944034576416
+Epoch  168  time  2.3688418865203857
+Epoch  169  time  2.42918062210083
+Epoch  170  time  2.3861124515533447
+Epoch  170  loss  0.3501955077749301 correct 50
+Epoch  171  time  2.3720455169677734
+Epoch  172  time  2.344176769256592
+Epoch  173  time  2.439138650894165
+Epoch  174  time  2.413475275039673
+Epoch  175  time  2.355506658554077
+Epoch  176  time  3.585891008377075
+Epoch  177  time  4.088001012802124
+Epoch  178  time  4.054345607757568
+Epoch  179  time  2.854822874069214
+Epoch  180  time  2.458038330078125
+Epoch  180  loss  0.15673054460304692 correct 50
+Epoch  181  time  2.3915884494781494
+Epoch  182  time  2.366894483566284
+Epoch  183  time  2.4201765060424805
+Epoch  184  time  2.376101016998291
+Epoch  185  time  2.3955318927764893
+Epoch  186  time  2.388350248336792
+Epoch  187  time  2.4861066341400146
+Epoch  188  time  2.393247127532959
+Epoch  189  time  2.3803014755249023
+Epoch  190  time  2.4440741539001465
+Epoch  190  loss  0.1121073823969764 correct 50
+Epoch  191  time  2.3520522117614746
+Epoch  192  time  2.389119863510132
+Epoch  193  time  2.38773775100708
+Epoch  194  time  2.4426040649414062
+Epoch  195  time  2.3668973445892334
+Epoch  196  time  2.3923392295837402
+Epoch  197  time  2.4773213863372803
+Epoch  198  time  2.4196043014526367
+Epoch  199  time  2.380722999572754
+Epoch  200  time  2.3711137771606445
+Epoch  200  loss  0.5906468279140378 correct 50
+Epoch  201  time  2.4599721431732178
+Epoch  202  time  2.4177589416503906
+Epoch  203  time  2.3706626892089844
+Epoch  204  time  2.4530208110809326
+Epoch  205  time  2.3830089569091797
+Epoch  206  time  3.7713732719421387
+Epoch  207  time  4.0101158618927
+Epoch  208  time  4.165815591812134
+Epoch  209  time  3.717963695526123
+Epoch  210  time  4.0542967319488525
+Epoch  210  loss  0.4403675230411246 correct 50
+Epoch  211  time  4.11356782913208
+Epoch  212  time  2.675579309463501
+Epoch  213  time  2.3860509395599365
+Epoch  214  time  2.381946325302124
+Epoch  215  time  2.428290367126465
+Epoch  216  time  2.3634767532348633
+Epoch  217  time  2.4021756649017334
+Epoch  218  time  2.5142853260040283
+Epoch  219  time  2.385322093963623
+Epoch  220  time  2.4177868366241455
+Epoch  220  loss  0.566221561582219 correct 50
+Epoch  221  time  2.4062397480010986
+Epoch  222  time  2.4531731605529785
+Epoch  223  time  2.3818511962890625
+Epoch  224  time  2.386611223220825
+Epoch  225  time  2.3841958045959473
+Epoch  226  time  2.4464633464813232
+Epoch  227  time  2.3994736671447754
+Epoch  228  time  2.3475215435028076
+Epoch  229  time  2.410879611968994
+Epoch  230  time  2.350691318511963
+Epoch  230  loss  0.43438535024492547 correct 50
+Epoch  231  time  2.417004346847534
+Epoch  232  time  2.347907066345215
+Epoch  233  time  3.3842756748199463
+Epoch  234  time  4.045624017715454
+Epoch  235  time  4.024036169052124
+Epoch  236  time  3.134028434753418
+Epoch  237  time  2.366994619369507
+Epoch  238  time  2.3465399742126465
+Epoch  239  time  2.366318464279175
+Epoch  240  time  2.487579345703125
+Epoch  240  loss  0.1582500316056542 correct 49
+Epoch  241  time  2.4293031692504883
+Epoch  242  time  2.3678534030914307
+Epoch  243  time  2.4340388774871826
+Epoch  244  time  2.3918192386627197
+Epoch  245  time  2.362412691116333
+Epoch  246  time  2.3826210498809814
+Epoch  247  time  2.4573135375976562
+Epoch  248  time  2.4348013401031494
+Epoch  249  time  2.3540306091308594
+Epoch  250  time  2.3555052280426025
+Epoch  250  loss  0.05771187401274891 correct 50
+Epoch  251  time  2.4059736728668213
+Epoch  252  time  2.3857815265655518
+Epoch  253  time  2.4212357997894287
+Epoch  254  time  2.4867022037506104
+Epoch  255  time  2.4039289951324463
+Epoch  256  time  2.4542019367218018
+Epoch  257  time  2.414130210876465
+Epoch  258  time  2.4640650749206543
+Epoch  259  time  2.3501946926116943
+Epoch  260  time  2.3629114627838135
+Epoch  260  loss  1.0288215957256168 correct 50
+Epoch  261  time  2.464965343475342
+Epoch  262  time  2.371224880218506
+Epoch  263  time  3.3208866119384766
+Epoch  264  time  4.051497220993042
+Epoch  265  time  4.131380081176758
+Epoch  266  time  2.9873573780059814
+Epoch  267  time  2.4193387031555176
+Epoch  268  time  2.445730686187744
+Epoch  269  time  2.3921022415161133
+Epoch  270  time  2.368455171585083
+Epoch  270  loss  0.6257873425180821 correct 49
+Epoch  271  time  2.364335536956787
+Epoch  272  time  2.4278740882873535
+Epoch  273  time  2.3558897972106934
+Epoch  274  time  2.335791826248169
+Epoch  275  time  2.398118019104004
+Epoch  276  time  2.380688190460205
+Epoch  277  time  2.403172254562378
+Epoch  278  time  2.403623104095459
+Epoch  279  time  2.4258968830108643
+Epoch  280  time  2.4527487754821777
+Epoch  280  loss  0.08156417344868583 correct 50
+Epoch  281  time  2.389345407485962
+Epoch  282  time  2.3713696002960205
+Epoch  283  time  2.4606876373291016
+Epoch  284  time  2.3966331481933594
+Epoch  285  time  2.379770517349243
+Epoch  286  time  2.4925622940063477
+Epoch  287  time  2.414992094039917
+Epoch  288  time  2.4624252319335938
+Epoch  289  time  2.460300922393799
+Epoch  290  time  2.4823427200317383
+Epoch  290  loss  0.2947794678566611 correct 50
+Epoch  291  time  2.4308009147644043
+Epoch  292  time  2.42220401763916
+Epoch  293  time  3.9823129177093506
+Epoch  294  time  4.137664794921875
+Epoch  295  time  4.049311876296997
+Epoch  296  time  2.547344446182251
+Epoch  297  time  2.421623945236206
+Epoch  298  time  2.3664684295654297
+Epoch  299  time  2.37744140625
+Epoch  300  time  2.481348752975464
+Epoch  300  loss  0.051029488114776 correct 50
+Epoch  301  time  2.38476300239563
+Epoch  302  time  2.404282569885254
+Epoch  303  time  2.4049930572509766
+Epoch  304  time  2.4210457801818848
+Epoch  305  time  2.3465218544006348
+Epoch  306  time  2.366074800491333
+Epoch  307  time  2.480682849884033
+Epoch  308  time  2.357261896133423
+Epoch  309  time  2.3635098934173584
+Epoch  310  time  2.372105598449707
+Epoch  310  loss  0.06171639844829817 correct 50
+Epoch  311  time  2.4972643852233887
+Epoch  312  time  2.3793082237243652
+Epoch  313  time  2.3855090141296387
+Epoch  314  time  2.4079337120056152
+Epoch  315  time  2.4504339694976807
+Epoch  316  time  2.3936524391174316
+Epoch  317  time  2.402951240539551
+Epoch  318  time  2.466338634490967
+Epoch  319  time  2.394542932510376
+Epoch  320  time  2.374732494354248
+Epoch  320  loss  0.6226275207290044 correct 50
+Epoch  321  time  2.58551287651062
+Epoch  322  time  3.946735143661499
+Epoch  323  time  4.005658388137817
+Epoch  324  time  3.89224910736084
+Epoch  325  time  2.444655179977417
+Epoch  326  time  3.4469358921051025
+Epoch  327  time  3.9840500354766846
+Epoch  328  time  4.012059450149536
+Epoch  329  time  2.9669578075408936
+Epoch  330  time  2.3852956295013428
+Epoch  330  loss  0.9600556216758497 correct 50
+Epoch  331  time  2.377938747406006
+Epoch  332  time  2.428084135055542
+Epoch  333  time  2.39666748046875
+Epoch  334  time  2.397987127304077
+Epoch  335  time  2.363969564437866
+Epoch  336  time  2.4328036308288574
+Epoch  337  time  2.413583993911743
+Epoch  338  time  2.3673501014709473
+Epoch  339  time  2.4351017475128174
+Epoch  340  time  2.3831980228424072
+Epoch  340  loss  0.00928007170906672 correct 50
+Epoch  341  time  2.407137393951416
+Epoch  342  time  2.430880546569824
+Epoch  343  time  2.455519437789917
+Epoch  344  time  2.333930253982544
+Epoch  345  time  2.3783929347991943
+Epoch  346  time  2.4104392528533936
+Epoch  347  time  2.420900583267212
+Epoch  348  time  2.52514386177063
+Epoch  349  time  3.836066722869873
+Epoch  350  time  4.0786590576171875
+Epoch  350  loss  0.07120545919683444 correct 50
+Epoch  351  time  3.9327173233032227
+Epoch  352  time  2.3353893756866455
+Epoch  353  time  2.354877233505249
+Epoch  354  time  2.4126245975494385
+Epoch  355  time  2.3304128646850586
+Epoch  356  time  2.3724026679992676
+Epoch  357  time  2.4479637145996094
+Epoch  358  time  2.353560209274292
+Epoch  359  time  2.3653228282928467
+Epoch  360  time  2.365800619125366
+Epoch  360  loss  0.01446446547711757 correct 50
+Epoch  361  time  2.4411585330963135
+Epoch  362  time  2.351074695587158
+Epoch  363  time  2.3483147621154785
+Epoch  364  time  2.4801156520843506
+Epoch  365  time  2.396272897720337
+Epoch  366  time  2.373258113861084
+Epoch  367  time  2.3517634868621826
+Epoch  368  time  2.421027660369873
+Epoch  369  time  2.338656425476074
+Epoch  370  time  2.4117558002471924
+Epoch  370  loss  0.5615915335334389 correct 50
+Epoch  371  time  2.4608469009399414
+Epoch  372  time  2.460024118423462
+Epoch  373  time  2.4015614986419678
+Epoch  374  time  2.3463635444641113
+Epoch  375  time  2.476755380630493
+Epoch  376  time  2.382021188735962
+Epoch  377  time  2.406430244445801
+Epoch  378  time  3.7339141368865967
+Epoch  379  time  4.136653423309326
+Epoch  380  time  3.98236346244812
+Epoch  380  loss  0.02426395546641234 correct 50
+Epoch  381  time  2.5452029705047607
+Epoch  382  time  2.42822265625
+Epoch  383  time  2.3840255737304688
+Epoch  384  time  2.366058588027954
+Epoch  385  time  2.369933605194092
+Epoch  386  time  2.3958358764648438
+Epoch  387  time  2.3511626720428467
+Epoch  388  time  2.34902286529541
+Epoch  389  time  2.3861656188964844
+Epoch  390  time  2.3438827991485596
+Epoch  390  loss  0.19444093284645292 correct 50
+Epoch  391  time  2.3585097789764404
+Epoch  392  time  2.342899799346924
+Epoch  393  time  2.4201290607452393
+Epoch  394  time  2.388110876083374
+Epoch  395  time  2.3649115562438965
+Epoch  396  time  2.420624017715454
+Epoch  397  time  2.360659599304199
+Epoch  398  time  2.3203930854797363
+Epoch  399  time  2.324374198913574
+Epoch  400  time  2.4289214611053467
+Epoch  400  loss  0.06330456676986942 correct 50
+Epoch  401  time  2.3428800106048584
+Epoch  402  time  2.3427486419677734
+Epoch  403  time  2.3980257511138916
+Epoch  404  time  2.3486342430114746
+Epoch  405  time  2.3171088695526123
+Epoch  406  time  2.3737850189208984
+Epoch  407  time  2.467156410217285
+Epoch  408  time  3.0404818058013916
+Epoch  409  time  4.049355506896973
+Epoch  410  time  4.168414115905762
+Epoch  410  loss  0.019555570536974636 correct 49
+Epoch  411  time  3.254178285598755
+Epoch  412  time  2.3640575408935547
+Epoch  413  time  2.3245127201080322
+Epoch  414  time  2.396608352661133
+Epoch  415  time  2.412384271621704
+Epoch  416  time  2.3481907844543457
+Epoch  417  time  2.4586901664733887
+Epoch  418  time  2.3945751190185547
+Epoch  419  time  2.362563371658325
+Epoch  420  time  2.3621068000793457
+Epoch  420  loss  0.021511512564289147 correct 49
+Epoch  421  time  2.424671173095703
+Epoch  422  time  2.354757070541382
+Epoch  423  time  2.322683572769165
+Epoch  424  time  2.346409797668457
+Epoch  425  time  2.4144484996795654
+Epoch  426  time  2.3523292541503906
+Epoch  427  time  2.3800244331359863
+Epoch  428  time  2.411928415298462
+Epoch  429  time  2.401120901107788
+Epoch  430  time  2.3881077766418457
+Epoch  430  loss  0.01081939126744168 correct 50
+Epoch  431  time  2.3895699977874756
+Epoch  432  time  2.433877468109131
+Epoch  433  time  2.376713752746582
+Epoch  434  time  2.3471813201904297
+Epoch  435  time  2.430241346359253
+Epoch  436  time  2.425769329071045
+Epoch  437  time  3.605055332183838
+Epoch  438  time  3.9544246196746826
+Epoch  439  time  4.109410762786865
+Epoch  440  time  2.726235866546631
+Epoch  440  loss  0.32093225179114204 correct 50
+Epoch  441  time  2.3823511600494385
+Epoch  442  time  2.4546287059783936
+Epoch  443  time  2.3366355895996094
+Epoch  444  time  3.1402101516723633
+Epoch  445  time  3.947939872741699
+Epoch  446  time  4.0896525382995605
+Epoch  447  time  3.1832900047302246
+Epoch  448  time  2.354372262954712
+Epoch  449  time  2.4064927101135254
+Epoch  450  time  2.3748221397399902
+Epoch  450  loss  0.45042094569120605 correct 50
+Epoch  451  time  2.3521008491516113
+Epoch  452  time  2.383281707763672
+Epoch  453  time  2.4326114654541016
+Epoch  454  time  2.3523874282836914
+Epoch  455  time  2.3729488849639893
+Epoch  456  time  2.3507587909698486
+Epoch  457  time  2.4117650985717773
+Epoch  458  time  2.3637592792510986
+Epoch  459  time  2.348860740661621
+Epoch  460  time  2.4120395183563232
+Epoch  460  loss  0.021573090889667718 correct 50
+Epoch  461  time  2.3602421283721924
+Epoch  462  time  2.3531460762023926
+Epoch  463  time  2.397390127182007
+Epoch  464  time  3.5216047763824463
+Epoch  465  time  4.0591206550598145
+Epoch  466  time  4.005895137786865
+Epoch  467  time  2.9363648891448975
+Epoch  468  time  2.3755664825439453
+Epoch  469  time  2.3748481273651123
+Epoch  470  time  2.3832778930664062
+Epoch  470  loss  0.0741275614995816 correct 50
+Epoch  471  time  2.495872974395752
+Epoch  472  time  2.3641793727874756
+Epoch  473  time  2.380453109741211
+Epoch  474  time  2.42087459564209
+Epoch  475  time  2.4203293323516846
+Epoch  476  time  2.4061279296875
+Epoch  477  time  2.3854851722717285
+Epoch  478  time  2.4266505241394043
+Epoch  479  time  2.389392137527466
+Epoch  480  time  2.373859405517578
+Epoch  480  loss  0.10432475444121772 correct 50
+Epoch  481  time  2.4725451469421387
+Epoch  482  time  2.3784735202789307
+Epoch  483  time  2.414008855819702
+Epoch  484  time  2.441904306411743
+Epoch  485  time  2.4832663536071777
+Epoch  486  time  2.402099847793579
+Epoch  487  time  2.4019994735717773
+Epoch  488  time  2.3788700103759766
+Epoch  489  time  2.447458028793335
+Epoch  490  time  2.3697566986083984
+Epoch  490  loss  0.060727236590522385 correct 50
+Epoch  491  time  2.379556894302368
+Epoch  492  time  2.475602388381958
+Epoch  493  time  2.673783540725708
+Epoch  494  time  3.958961248397827
+Epoch  495  time  4.232456207275391
+Epoch  496  time  3.900341272354126
+Epoch  497  time  2.414020538330078
+Epoch  498  time  2.451335906982422
+Epoch  499  time  2.497321605682373
+Average time per epoch 2.622357394695282 (for 500 epochs)

@@ -1,0 +1,78 @@
+REDUCE
+
+================================================================================
+ Parallel Accelerator Optimizing:  Function tensor_reduce.<locals>._reduce,
+/Users/wdaugherty/github-classroom/Cornell-Tech-ML/mle-
+module-3-WDaugherty/minitorch/fast_ops.py (256)
+================================================================================
+
+
+Parallel loop listing for  Function tensor_reduce.<locals>._reduce, /Users/wdaugherty/github-classroom/Cornell-Tech-ML/mle-module-3-WDaugherty/minitorch/fast_ops.py (256)
+-------------------------------------------------------------------------|loop #ID
+    def _reduce(                                                         |
+        out: Storage,                                                    |
+        out_shape: Shape,                                                |
+        out_strides: Strides,                                            |
+        a_storage: Storage,                                              |
+        a_shape: Shape,                                                  |
+        a_strides: Strides,                                              |
+        reduce_dim: int,                                                 |
+    ) -> None:                                                           |
+        # TODO: Implement for Task 3.1.                                  |
+        # raise NotImplementedError("Need to implement for Task 3.1")    |
+        red_size = a_shape[reduce_dim]                                   |
+        red_stride = a_strides[reduce_dim]                               |
+        for i in prange(len(out)):  # Loop in parallel/ Outer Loop-------| #1
+            # Does this need to be int32 or int64?                       |
+            out_index: Index = np.zeros(---------------------------------| #0
+                MAX_DIMS, np.int32                                       |
+            )  # Is this what it means by numpy buffer?                  |
+            to_index(i, out_shape, out_index)                            |
+            o = index_to_position(out_index, out_strides)                |
+            j = index_to_position(out_index, a_strides)                  |
+            temp = out[o]                                                |
+            for s in range(                                              |
+                red_size                                                 |
+            ):  # Loop not in parallel/ Inner Loop has no functions      |
+                temp = fn(temp, a_storage[j])                            |
+                j += red_stride                                          |
+            out[o] = temp                                                |
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+Following the attempted fusion of parallel for-loops there are 2 parallel for-
+loop(s) (originating from loops labelled: #1, #0).
+--------------------------------------------------------------------------------
+---------------------------- Optimising loop nests -----------------------------
+Attempting loop nest rewrites (optimising for the largest parallel loops)...
+
++--1 is a parallel loop
+   +--0 --> rewritten as a serial loop
+--------------------------------------------------------------------------------
+----------------------------- Before Optimisation ------------------------------
+Parallel region 0:
++--1 (parallel)
+   +--0 (parallel)
+
+
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel region 0:
++--1 (parallel)
+   +--0 (serial)
+
+
+
+Parallel region 0 (loop #1) had 0 loop(s) fused and 1 loop(s) serialized as part
+ of the larger parallel loop (#1).
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+The memory allocation derived from the instruction at /Users/wdaugherty/github-
+classroom/Cornell-Tech-ML/mle-module-3-WDaugherty/minitorch/fast_ops.py (271) is
+ hoisted out of the parallel loop labelled #1 (it will be performed before the
+loop is executed and reused inside the loop):
+   Allocation:: out_index: Index = np.zeros(
+    - numpy.empty() is used for the allocation.
+None

@@ -1,0 +1,99 @@
+ZIP
+
+================================================================================
+ Parallel Accelerator Optimizing:  Function tensor_zip.<locals>._zip,
+/Users/wdaugherty/github-classroom/Cornell-Tech-ML/mle-
+module-3-WDaugherty/minitorch/fast_ops.py (202)
+================================================================================
+
+
+Parallel loop listing for  Function tensor_zip.<locals>._zip, /Users/wdaugherty/github-classroom/Cornell-Tech-ML/mle-module-3-WDaugherty/minitorch/fast_ops.py (202)
+-------------------------------------------------------------------------|loop #ID
+    def _zip(                                                            |
+        out: Storage,                                                    |
+        out_shape: Shape,                                                |
+        out_strides: Strides,                                            |
+        a_storage: Storage,                                              |
+        a_shape: Shape,                                                  |
+        a_strides: Strides,                                              |
+        b_storage: Storage,                                              |
+        b_shape: Shape,                                                  |
+        b_strides: Strides,                                              |
+    ) -> None:                                                           |
+        # TODO: Implement for Task 3.1.                                  |
+        # raise NotImplementedError("Need to implement for Task 3.1")    |
+        for i in prange(len(out)):  # Loop in parallel/ Outer Loop-------| #3
+            out_index: Index = np.zeros(---------------------------------| #0
+                MAX_DIMS, np.int32                                       |
+            )  # Is this what it means by numpy buffer?                  |
+            a_index: Index = np.zeros(-----------------------------------| #1
+                MAX_DIMS, np.int32                                       |
+            )  # Is this what it means by numpy buffer?                  |
+            b_index: Index = np.zeros(-----------------------------------| #2
+                MAX_DIMS, np.int32                                       |
+            )  # Is this what it means by numpy buffer?                  |
+            to_index(i, out_shape, out_index)                            |
+            o = index_to_position(out_index, out_strides)                |
+            broadcast_index(out_index, out_shape, a_shape, a_index)      |
+            j = index_to_position(a_index, a_strides)                    |
+            broadcast_index(out_index, out_shape, b_shape, b_index)      |
+            k = index_to_position(b_index, b_strides)                    |
+            # broadcast_index(b_index, b_shape)                          |
+            out[o] = fn(a_storage[j], b_storage[k])                      |
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+Following the attempted fusion of parallel for-loops there are 4 parallel for-
+loop(s) (originating from loops labelled: #3, #0, #1, #2).
+--------------------------------------------------------------------------------
+---------------------------- Optimising loop nests -----------------------------
+Attempting loop nest rewrites (optimising for the largest parallel loops)...
+
++--3 is a parallel loop
+   +--0 --> rewritten as a serial loop
+   +--1 --> rewritten as a serial loop
+   +--2 --> rewritten as a serial loop
+--------------------------------------------------------------------------------
+----------------------------- Before Optimisation ------------------------------
+Parallel region 0:
++--3 (parallel)
+   +--0 (parallel)
+   +--1 (parallel)
+   +--2 (parallel)
+
+
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel region 0:
++--3 (parallel)
+   +--0 (serial)
+   +--1 (serial)
+   +--2 (serial)
+
+
+
+Parallel region 0 (loop #3) had 0 loop(s) fused and 3 loop(s) serialized as part
+ of the larger parallel loop (#3).
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+The memory allocation derived from the instruction at /Users/wdaugherty/github-
+classroom/Cornell-Tech-ML/mle-module-3-WDaugherty/minitorch/fast_ops.py (216) is
+ hoisted out of the parallel loop labelled #3 (it will be performed before the
+loop is executed and reused inside the loop):
+   Allocation:: out_index: Index = np.zeros(
+    - numpy.empty() is used for the allocation.
+The memory allocation derived from the instruction at /Users/wdaugherty/github-
+classroom/Cornell-Tech-ML/mle-module-3-WDaugherty/minitorch/fast_ops.py (219) is
+ hoisted out of the parallel loop labelled #3 (it will be performed before the
+loop is executed and reused inside the loop):
+   Allocation:: a_index: Index = np.zeros(
+    - numpy.empty() is used for the allocation.
+The memory allocation derived from the instruction at /Users/wdaugherty/github-
+classroom/Cornell-Tech-ML/mle-module-3-WDaugherty/minitorch/fast_ops.py (222) is
+ hoisted out of the parallel loop labelled #3 (it will be performed before the
+loop is executed and reused inside the loop):
+   Allocation:: b_index: Index = np.zeros(
+    - numpy.empty() is used for the allocation.
+None

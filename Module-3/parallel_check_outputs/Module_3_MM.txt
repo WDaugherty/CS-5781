@@ -1,0 +1,98 @@
+MATRIX MULTIPLY
+
+================================================================================
+ Parallel Accelerator Optimizing:  Function _tensor_matrix_multiply,
+/Users/wdaugherty/github-classroom/Cornell-Tech-ML/mle-
+module-3-WDaugherty/minitorch/fast_ops.py (288)
+================================================================================
+
+
+Parallel loop listing for  Function _tensor_matrix_multiply, /Users/wdaugherty/github-classroom/Cornell-Tech-ML/mle-module-3-WDaugherty/minitorch/fast_ops.py (288)
+---------------------------------------------------------------------------------------------------------|loop #ID
+def _tensor_matrix_multiply(                                                                             |
+    out: Storage,                                                                                        |
+    out_shape: Shape,                                                                                    |
+    out_strides: Strides,                                                                                |
+    a_storage: Storage,                                                                                  |
+    a_shape: Shape,                                                                                      |
+    a_strides: Strides,                                                                                  |
+    b_storage: Storage,                                                                                  |
+    b_shape: Shape,                                                                                      |
+    b_strides: Strides,                                                                                  |
+) -> None:                                                                                               |
+    """                                                                                                  |
+    NUMBA tensor matrix multiply function.                                                               |
+                                                                                                         |
+    Should work for any tensor shapes that broadcast as long as                                          |
+                                                                                                         |
+    ```                                                                                                  |
+    assert a_shape[-1] == b_shape[-2]                                                                    |
+    ```                                                                                                  |
+                                                                                                         |
+    Optimizations:                                                                                       |
+                                                                                                         |
+    * Outer loop in parallel                                                                             |
+    * No index buffers or function calls                                                                 |
+    * Inner loop should have no global writes, 1 multiply.                                               |
+                                                                                                         |
+                                                                                                         |
+    Args:                                                                                                |
+        out (Storage): storage for `out` tensor                                                          |
+        out_shape (Shape): shape for `out` tensor                                                        |
+        out_strides (Strides): strides for `out` tensor                                                  |
+        a_storage (Storage): storage for `a` tensor                                                      |
+        a_shape (Shape): shape for `a` tensor                                                            |
+        a_strides (Strides): strides for `a` tensor                                                      |
+        b_storage (Storage): storage for `b` tensor                                                      |
+        b_shape (Shape): shape for `b` tensor                                                            |
+        b_strides (Strides): strides for `b` tensor                                                      |
+                                                                                                         |
+    Returns:                                                                                             |
+        None : Fills in `out`                                                                            |
+    """                                                                                                  |
+    a_batch_stride = a_strides[0] if a_shape[0] > 1 else 0                                               |
+    b_batch_stride = b_strides[0] if b_shape[0] > 1 else 0                                               |
+                                                                                                         |
+    # TODO: Implement for Task 3.2.                                                                      |
+    #raise NotImplementedError("Need to implement for Task 3.2")                                         |
+    #Want to get rows of of A                                                                            |
+    # Note: We are assuming a 3D matrix                                                                  |
+    row_a = a_strides[2]                                                                                 |
+                                                                                                         |
+    #Want to get columns of B assuming a 3D matrix                                                       |
+    col_b = b_strides[1]                                                                                 |
+                                                                                                         |
+    #Define C for A * B = C which depends on our rows of A                                               |
+    C = a_shape[-1]                                                                                      |
+                                                                                                         |
+                                                                                                         |
+                                                                                                         |
+    for i in prange(0,out_shape[0]): #Parallel loop for dimension----------------------------------------| #0
+        for j in range(0,out_shape[1]): #Loop for rows                                                   |
+            for k in range(0,out_shape[2]): #Loop for rows                                               |
+                temp = 0.0                                                                               |
+                l =  i * a_batch_stride + j * a_strides[1]                                               |
+                m = i * b_batch_stride + k * b_strides[2]                                                |
+                for n in range(0, C): #Summation loop                                                    |
+                    temp += a_storage[l] * b_storage[m]                                                  |
+                    l += row_a                                                                           |
+                    m += col_b                                                                           |
+                                                                                                         |
+                                                                                                         |
+                out[i * out_strides[0] + j * out_strides[1] + k * out_strides[2]] = temp #Define out     |
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+Following the attempted fusion of parallel for-loops there are 1 parallel for-
+loop(s) (originating from loops labelled: #0).
+--------------------------------------------------------------------------------
+----------------------------- Before Optimisation ------------------------------
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel structure is already optimal.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+No allocation hoisting found
+None
